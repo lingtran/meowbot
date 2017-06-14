@@ -1,0 +1,29 @@
+{
+  "name": "meowbot",
+  "version": "1.0.0",
+  "description": "MeowBot - FAQ for feline things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingtran/meowbot.git"
+  },
+  "keywords": [
+    "meow",
+    "chatbot"
+  ],
+  "author": "Ling Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lingtran/meowbot/issues"
+  },
+  "homepage": "https://github.com/lingtran/meowbot#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.6",
+    "request": "^2.81.0"
+  }
+}
