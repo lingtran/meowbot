@@ -31,6 +31,8 @@ app.post("/webhook", function (req, res) {
       entry.messaging.forEach(function(event) {
         if (event.postback) {
           processPostback(event);
+        } else if (event.message) {
+          processMessage(event);
         }
       });
     });
@@ -64,6 +66,18 @@ function processPostback(event) {
     });
   }
 }
+
+function processMessage(event) {
+  if (!event.message.is_echo) {
+    var message = event.message;
+    var senderId = event.sender.id;
+
+    console.log("Received message from senderId: " + sendId);
+    console.log("Message is: " + JSON.stringify(message));
+    sendMessage(senderId, {text: "Hi!"})
+  }
+}
+
 
 // sends message to user
 function sendMessage(recipientId, message) {
